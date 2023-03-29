@@ -1,0 +1,39 @@
+.app-body {
+  height: 620px;
+  width: 412px;
+  border: solid 3px black;
+  margin-left: 33%;
+}
+
+.app-name {
+  border-bottom: 3px solid black;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5%;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#countDown {
+  font-size: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+#start-but {
+  display: flex;
+  margin-left: 28%;
+  font-size: 50px;
+  margin-top: -75px;
+}
+
+select {
+  padding: 15px;
+  margin-right: 25px;
+  margin-left: 45px;
+}
+
+.player-select-position {
+  margin-top: 100px;
+}
