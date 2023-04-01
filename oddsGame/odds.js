@@ -1,27 +1,30 @@
 const play = document.querySelector("#start-but");
 const time = document.querySelector("#countDown");
+let count = 3;
 
 const playAudio = function () {
     let audio = new Audio('audio/countdown.mp3')
     audio.play();
 
-        let timer = setInterval(function(){
-            if(time.innerHTML === "3") {
-                time.innerHTML = "2"
-            }
-        },2000)
+        function countdown() {
+            time.textContent = count;
+            count--;
 
-        let timerTwo = setInterval(function(){
-            if(time.innerHTML === "2") {
-                time.innerHTML = "1"
-            }
-        },4000)
-
-        let timerThree = setInterval(function(){
-            if(time.innerHTML === "1") {
-                time.innerHTML = "GO"
-            }
-        },7000)
+            if(count === -1) {
+                time.textContent = "GO"
+                clearInterval(interval);
+                document.querySelector("#start-but").disabled = true;
+            } 
+        }
+        const interval = setInterval(countdown, 1500);
 };
-
 play.addEventListener("click", playAudio);
+
+const reset = document.querySelector("#restart");
+
+reset.addEventListener("click", function() {
+    document.querySelector("#start-but").disabled = false;
+    count = 3;
+    play.addEventListener("click", playAudio);
+});
+
