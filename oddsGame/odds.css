@@ -3,6 +3,8 @@
   width: 412px;
   border: solid 3px black;
   margin-left: 33%;
+  background-image: url(audio/background1.jpg);
+  
 }
 
 .app-name {
@@ -10,15 +12,23 @@
   display: flex;
   justify-content: center;
   padding-bottom: 5%;
+  padding-top: 3%;
+  background-color: white;
   font-family: "Courier New", Courier, monospace;
+  
+  
 }
 
 #countDown {
   font-size: 150px;
+  font-family: 'Courier New', Courier, monospace;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 1px;
+  background-color: transparent;
+  color: white;
+  
 }
 
 #start-but {
@@ -26,6 +36,13 @@
   margin-left: 28%;
   font-size: 50px;
   margin-top: -50px;
+  font-family:'Courier New', Courier, monospace;
+  opacity: 0.7;
+}
+
+#start-but:hover {
+  background-color: rgb(77, 1, 1);
+  color: white;
 }
 
 #restart {
@@ -33,5 +50,12 @@
     margin-left: 20%;
     font-size: 50px;
     margin-top: 10%;
+    font-family:'Courier New', Courier, monospace;
+    opacity: 0.7;
+  }
+
+  #restart:hover {
+    background-color: rgb(77, 1, 1);
+    color: white;
   }
 
